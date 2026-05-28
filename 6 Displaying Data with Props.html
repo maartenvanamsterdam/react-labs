@@ -1,4 +1,4 @@
-<html>
+<! DOCTYPE html>
   <body>
     <div id="app"></div>
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -8,15 +8,15 @@
     <script type="text/jsx">
       const app = document.getElementById("app");
 
-      function Header() {
-        return <h1>Develop. Preview. Ship.</h1>;
+      function Header({ title }) {
+        console.log(title);
+        return <h1>title</h1>;
       }
 
       function HomePage() {
         return (
           <div>
-            {/* Nesting the Header component*/}
-            <Header />
+            <Header title="React" />
           </div>
         );
       }
@@ -26,3 +26,5 @@
     </script>
   </body>
 </html>
+
+<!-- https://nextjs.org/learn/react-foundations/displaying-data-with-props -->
